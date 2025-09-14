@@ -18,7 +18,8 @@
     body {
       min-height:100vh; font-family:'Pixelify Sans',sans-serif;
       background:linear-gradient(180deg,var(--bg),#081026);
-      color:#e6eef8; padding:32px; line-height:1.45;
+      color:#e6eef8; padding:32px; line-height:1.6;
+      font-size:16px; /* fonte base maior */
     }
     .card {
       background:rgba(255,255,255,0.02); padding:28px;
@@ -29,30 +30,30 @@
       display:grid; 
       grid-template-columns:1fr 400px; 
       gap:18px;
-      align-items:center; 
+      align-items:start; /* topo alinhado */
       margin-bottom:38px;
     }
-    .hero h2 { font-size:34px; margin-bottom:12px }
-    .hero p { color:var(--muted); margin-bottom:18px }
+    .hero h2 { font-size:44px; margin-bottom:16px } /* título maior */
+    .hero p { color:var(--muted); margin-bottom:20px; font-size:18px; } /* parágrafo maior */
     .preview {
       border:4px solid #fff; 
       border-radius:12px; 
-      margin-top:40px;
-      height:360px; 
+      margin-top:155px; /* empurra bem pra baixo */
+      height:380px; 
       background:url('img.png') center/cover no-repeat;
     }
-    .grid { display:grid; gap:16px; margin-top:24px }
+    .grid { display:grid; gap:18px; margin-top:28px }
     .cards { grid-template-columns:repeat(3,1fr) }
     .features { grid-template-columns:repeat(3,1fr) }
     .box {
-      padding:16px; border-radius:12px;
+      padding:18px; border-radius:12px;
       background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.05);
     }
-    .box h3 { font-size:16px; margin-top:6px }
-    .box p { font-size:14px; color:var(--muted); margin-top:8px }
+    .box h3, .box > div { font-size:20px; margin-top:8px }
+    .box p { font-size:16px; color:var(--muted); margin-top:10px; line-height:1.6 } 
     footer {
       margin-top:36px; color:var(--muted);
-      display:flex; justify-content:space-between; font-size:13px;
+      display:flex; justify-content:space-between; font-size:14px;
     }
 
     @media (max-width:768px) {
@@ -61,7 +62,7 @@
       }
       .preview {
         height:280px;
-        margin-top:16px;
+        margin-top:24px; 
       }
       .cards, .features {
         grid-template-columns:1fr;
@@ -77,7 +78,8 @@
       <div class="cards grid">
         <div class="box">
           <div>Introdução</div>
-          <p>O avanço da Internet das Coisas (IoT) e do Metaverso está criando novas possibilidades de integração entre o mundo físico e o digital.</p> <p>Essa convergência já vem sendo chamada de Metaverso das Coisas (MoT), e promete transformar setores como saúde, educação, indústria, cidades inteligentes, entretenimento e trabalho remoto.</p>
+          <p>O avanço da Internet das Coisas (IoT) e do Metaverso está criando novas possibilidades de integração entre o mundo físico e o digital.</p>
+          <p>Essa convergência já vem sendo chamada de Metaverso das Coisas (MoT), e promete transformar setores como saúde, educação, indústria, cidades inteligentes, entretenimento e trabalho remoto.</p>
         </div>
         
         <div class="box">
@@ -110,53 +112,50 @@
       <div class="box">
         <strong>Integração na prática</strong>
         <p>•Gêmeos digitais: versões virtuais de máquinas, prédios, cidades ou até do corpo humano, alimentadas por IoT.</p>
-	      <p>•Edge Computing + 5G/6G: garantem latência baixa e transmissão rápida de grandes volumes de dados.</p>
-	      <p>•IA e Big Data: analisam os dados IoT e enriquecem a experiência no metaverso com previsões, automação e personalização.</p>
-	      <p>•Blockchain: pode garantir segurança, autenticidade e propriedade dos dados entre físico e virtual.</p>
+        <p>•Edge Computing + 5G/6G: garantem latência baixa e transmissão rápida de grandes volumes de dados.</p>
+        <p>•IA e Big Data: analisam os dados IoT e enriquecem a experiência no metaverso com previsões, automação e personalização.</p>
+        <p>•Blockchain: pode garantir segurança, autenticidade e propriedade dos dados entre físico e virtual.</p>
       </div>
 
       <div class="box">
         <strong>Aplicações Reais e Potenciais</strong>
         <p>•Saúde: monitoramento remoto com avatares de pacientes; simulações de cirurgias em gêmeos digitais.</p>
-	      <p>•Educação: laboratórios virtuais com dados reais de sensores; treinamentos técnicos seguros.</p>
-	      <p>•Indústria: manutenção preditiva; fábricas inteligentes com operação remota.</p>
-	      <p>•Cidades inteligentes: modelos 3D urbanos em tempo real para gestão de trânsito, energia e meio ambiente.</p>
-	      <p>•Entretenimento e varejo: provadores virtuais baseados em medidas reais; shows e jogos interativos.</p>
-	      <p>•Trabalho remoto: escritórios virtuais imersivos conectados a sensores ambientais.</p>
-
+        <p>•Educação: laboratórios virtuais com dados reais de sensores; treinamentos técnicos seguros.</p>
+        <p>•Indústria: manutenção preditiva; fábricas inteligentes com operação remota.</p>
+        <p>•Cidades inteligentes: modelos 3D urbanos em tempo real para gestão de trânsito, energia e meio ambiente.</p>
+        <p>•Entretenimento e varejo: provadores virtuais baseados em medidas reais; shows e jogos interativos.</p>
+        <p>•Trabalho remoto: escritórios virtuais imersivos conectados a sensores ambientais.</p>
       </div>
 
       <div class="box">
         <strong>Benefícios</strong>
         <p>•Melhor tomada de decisão em tempo real.</p>
-	      <p>•Redução de custos com manutenção e energia.</p>
-	      <p>•Novos modelos de negócio e maior engajamento.</p>
-	      <p>•Treinamento mais eficiente e seguro.</p>
-	      <p>•Melhoria de serviços públicos e privados.</p>
+        <p>•Redução de custos com manutenção e energia.</p>
+        <p>•Novos modelos de negócio e maior engajamento.</p>
+        <p>•Treinamento mais eficiente e seguro.</p>
+        <p>•Melhoria de serviços públicos e privados.</p>
       </div>
 
       <div class="box">
         <strong>Desafios</strong>
         <p>•Técnicos: alta demanda de rede e falta de padrões de interoperabilidade.</p>
-	      <p>•Segurança e privacidade: risco de vazamento de dados sensíveis.</p>
-	      <p>•Éticos: vigilância excessiva, desigualdade de acesso.</p>
-	      <p>•Legais: definição de responsabilidade em casos de falhas ou ataques.</p>
-
+        <p>•Segurança e privacidade: risco de vazamento de dados sensíveis.</p>
+        <p>•Éticos: vigilância excessiva, desigualdade de acesso.</p>
+        <p>•Legais: definição de responsabilidade em casos de falhas ou ataques.</p>
       </div>
 
       <div class="box">
         <strong>Tendências para os próximos 5–10 anos</strong>
         <p>•Expansão dos gêmeos digitais em cidades e indústrias.</p>
-	      <p>•Adoção massiva de edge computing e 5G/6G.</p>
+        <p>•Adoção massiva de edge computing e 5G/6G.</p>
         <p>•IA generativa integrando agentes virtuais inteligentes.</p>
-	      <p>•Novos padrões regulatórios para privacidade e interoperabilidade.</p>
-	      <p>•Consolidação de modelos de negócio híbridos (IoT + Metaverso + IA).</p>
-
+        <p>•Novos padrões regulatórios para privacidade e interoperabilidade.</p>
+        <p>•Consolidação de modelos de negócio híbridos (IoT + Metaverso + IA).</p>
       </div>
 
       <div class="box">
         <strong>Conclusão</strong>
-        <p>O Metaverso integrado à IoT é mais do que uma tendência: é um caminho para transformar o modo como interagimos com a realidade física e virtual. Apesar de desafios técnicos e éticos, seu potencial de inovação em setores-chave da sociedade torna essa convergência uma das maiores apostas tecnológicas da próxima década.</p>
+        <p>O Metaverso integrado à IoT é mais do que uma tendência: é um caminho para transformar o modo como interagimos com a realidade física e virtual.</p> <p>Apesar de desafios técnicos e éticos, seu potencial de inovação em setores-chave da sociedade torna essa convergência uma das maiores apostas tecnológicas da próxima década.</p>
       </div>
     </div>
   </section>
